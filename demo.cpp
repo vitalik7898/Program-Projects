@@ -5,6 +5,8 @@
 
 using namespace std;
 
+// Checks whether the given value x belongs to the expression domain.
+// Domain: x > -4 and x != 14.
 bool isInDomain(double x){
     return x > -4.0 && x != 14.0;
 }
