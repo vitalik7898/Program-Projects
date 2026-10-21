@@ -5,6 +5,10 @@
 
 using namespace std;
 
+bool isInDomain(double x){
+    return x > -4.0 && x != 14.0;
+}
+
 
 int main() {
     double x;
