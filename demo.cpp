@@ -26,6 +26,19 @@ double f(double x) {
     return part1 - part3 - part4 - part5;
 }
 
+void printOutput(double x, bool defined, double result) {
+    cout << fixed << setprecision(5);
+    cout << "\nfor x = " << x << "\n";
+
+    if (defined) {
+        cout << fixed << setprecision(9);
+        cout << "result = " << result << "\n";
+    }
+    else {
+        cout << "result = undefined\n";
+    }
+}
+
 
 int main() {
     double x;
@@ -36,12 +49,20 @@ int main() {
     cout << "Enter x (x > -4, x != 14): ";
     cin >> x;
 
-    cout << "***** do calculations ...";
+    if (cin.fail()) {
+        cout << "\nwrong input\n";
+        return 0;
+    }
+
+    cout << "***** do calculations ... ";
     bool defined = isInDomain(x);
     double result = 0.0;
     if (defined) {
         result = f(x);
+        cout << "done\n";
     }
+
+    printOutput(x, defined, result);
 
     return 0;
 }
