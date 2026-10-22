@@ -26,6 +26,7 @@ double f(double x) {
     return part1 - part3 - part4 - part5;
 }
 
+// Outputs the input value x and the calculation result in the required format.
 void printOutput(double x, bool defined, double result) {
     cout << fixed << setprecision(5);
     cout << "\nfor x = " << x << "\n";
